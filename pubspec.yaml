@@ -1,0 +1,51 @@
+name: waheed_hassan
+description: "Wahid Hassan's men's suit application"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.3.0
+  flutter_gap: ^1.2.0
+  flutter_screenutil_plus: ^1.5.0
+  flutter_localization: ^0.3.3
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/app_logo/
+    - assets/home_icons/
+    - assets/nav_bar_icons/
+    - assets/shared/
+  #   - images/a_dot_ham.jpeg
+
+  # To add custom fonts to your application, add a fonts section here,
+  # example:
+  fonts:
+    - family: IBMPlexSansArabic
+      fonts:
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-Light.ttf
+          weight: 300
+        - asset: assets/fonts/ibm-plex-sans-arabic/IBMPlexSansArabic-ExtraLight.ttf
+          weight: 200
