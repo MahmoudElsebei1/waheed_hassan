@@ -4,7 +4,9 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ItemAllCategoriesGridView extends StatelessWidget {
-  const ItemAllCategoriesGridView({super.key});
+  const ItemAllCategoriesGridView({super.key, required this.iconCategory, required this.category});
+  final String iconCategory;
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +18,9 @@ class ItemAllCategoriesGridView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset('assets/home_icons/suits.svg'),
+          SvgPicture.asset(iconCategory),
           Gap(8.h),
-          Text('بدلات'),
+          Text(category),
         ],
       ),
     );

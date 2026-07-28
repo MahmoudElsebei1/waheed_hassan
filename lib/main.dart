@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:waheed_hassan/features/home/presentation/views/home_view.dart';
+import 'package:waheed_hassan/features/product_details/presentation/views/product_details_view.dart';
 import 'features/all_categories/presentation/views/all_categories.dart';
 import 'features/all_categories/presentation/views/all_categories_grid.dart';
-import 'features/home/presentation/views/home_view.dart';
+import 'splash/view/splash.dart';
 
 void main() {
   runApp(const WaheedSuits());
@@ -32,7 +34,7 @@ class WaheedSuits extends StatelessWidget {
         ),
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AllCategoriesGrid(),
+      home: ProductDetailsView(),
     );
   }
 }

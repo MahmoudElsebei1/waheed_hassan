@@ -2,34 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:waheed_hassan/core/utils/app_text_styles.dart';
+class ItemGridView extends StatefulWidget {
+  late final String imagePath;
+  ItemGridView({super.key,required this.imagePath});
 
-class ItemGridView extends StatelessWidget {
-  const ItemGridView({super.key});
+  @override
+  State<ItemGridView> createState() => _ItemGridViewState();
+}
+
+class _ItemGridViewState extends State<ItemGridView> {
+  bool isFavourite = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             children: [
-              Image.network(
-                'https://imgs.search.brave.com/_Xz47PlMWFx2p1ULyqRsFHwDeHLURPQA-Z0l5wo8naQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5maWxmYW4uY29t/L05ld3NQaWNzL0Zp/bGZhbk5ldy9sYXJn/ZS8yNTYyNTZfMC5q/cGc',
-              ),
+              Image.network(widget.imagePath),
               PositionedDirectional(
-                end: 6,
-                top: 6,
+                end: 8,
+                top: 8,
                 child: CircleAvatar(radius: 16, backgroundColor: Colors.white),
               ),
               PositionedDirectional(
-                end: 12,
-                top: 12,
-                child: SvgPicture.asset('assets/home_icons/favourites.svg'),
+                end: 14,
+                top: 14,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isFavourite = !isFavourite;
+                    }
+                    );
+                  },
+                  child: isFavourite
+                  //todo icons issue when clicked
+                      ? SvgPicture.asset('assets/shared/is_favourite.svg',)
+                      : SvgPicture.asset('assets/shared/favourites.svg'),
+                ),
               ),
             ],
           ),
@@ -49,7 +66,11 @@ class ItemGridView extends StatelessWidget {
                 ),
                 Text(
                   'بدلة كلاسيكية سوداء',
-                  style: AppTextStyles.gridViewHomeItem(context),
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black
+                  ),
                 ),
                 Text('صوف إيطالي فاخر'),
                 Row(
@@ -59,7 +80,10 @@ class ItemGridView extends StatelessWidget {
                     Spacer(),
                     InkWell(
                       child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 4,
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(21),
                           shape: BoxShape.rectangle,
@@ -72,7 +96,7 @@ class ItemGridView extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

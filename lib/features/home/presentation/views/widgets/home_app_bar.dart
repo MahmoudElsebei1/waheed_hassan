@@ -3,10 +3,7 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/utils/app_text_styles.dart';
-
-//TODO use it
-class HomeAppBar extends StatelessWidget {
+class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
 
   @override
@@ -36,8 +33,8 @@ class HomeAppBar extends StatelessWidget {
                 ),
               ),
               PositionedDirectional(
-                start: 12.5,
-                top: 12.5,
+                start: 14.5,
+                top: 13.5,
                 child: CircleAvatar(
                   backgroundColor: Color(0xFFFF3A2F),
                   radius: 4,
@@ -62,7 +59,7 @@ class HomeAppBar extends StatelessWidget {
                 end: 14.5,
                 top: 14.5,
                 child: SvgPicture.asset(
-                  'assets/home_icons/favourites.svg',
+                  'assets/shared/favourites.svg',
                 ),
               ),
             ],
@@ -73,9 +70,15 @@ class HomeAppBar extends StatelessWidget {
             children: [
               Text(
                 'WAHEED HASSAN',
-                style: AppTextStyles.appBarTitle(context),
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                ),
               ),
-              Text('MEN’S SUITS', style: AppTextStyles.appBarTitle(context)),
+              Text('MEN’S SUITS', style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w800,
+              )),
             ],
           ),
           Gap(3.5.w),
@@ -88,4 +91,6 @@ class HomeAppBar extends StatelessWidget {
       ),
     );
   }
+  @override
+  Size get preferredSize=> const Size.fromHeight(kToolbarHeight);
 }

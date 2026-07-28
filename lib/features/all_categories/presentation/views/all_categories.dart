@@ -41,7 +41,10 @@ class AllCategoriesView extends StatelessWidget {
             Gap(89.5.w),
             Text(
               'كل التصنيفات',
-              style: AppTextStyles.appBarAllCategories(context),
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ],
         ),
@@ -66,10 +69,10 @@ class AllCategoriesView extends StatelessWidget {
                     color: Color(0xFF9E9E9E),
                   ),
                 ),
-                fillColor: Colors.white,
+                fillColor: Color(0xFFF6F6F6),
                 filled: true,
                 focusColor: Colors.black,
-                hintText: 'البحث عن منتج...',
+                hintText: 'البحث عن تصنيف...',
                 hintStyle: TextStyle(color: Color(0xFF9E9E9E)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -78,13 +81,25 @@ class AllCategoriesView extends StatelessWidget {
               ),
             ),
             Gap(38.h),
-            ListView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
 
-
-              itemBuilder: (context, index) => ItemAllCategories(),
+            ItemAllCategories(
+              iconCategory: 'assets/shared/shirts.svg',
+              category: 'قمصان',
+            ),
+            Gap(8.h),
+            ItemAllCategories(
+              iconCategory: 'assets/shared/suits.svg',
+              category: 'بدلات',
+            ),
+            Gap(8.h),
+            ItemAllCategories(
+              iconCategory: 'assets/shared/shoes.svg',
+              category: 'أحذية',
+            ),
+            Gap(8.h),
+            ItemAllCategories(
+              iconCategory: 'assets/shared/accessories.svg',
+              category: 'اكسسوارات',
             ),
           ],
         ),

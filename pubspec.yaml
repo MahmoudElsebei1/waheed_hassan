@@ -28,6 +28,7 @@ flutter:
     - assets/home_icons/
     - assets/nav_bar_icons/
     - assets/shared/
+    - assets/product_details/
   #   - images/a_dot_ham.jpeg
 
   # To add custom fonts to your application, add a fonts section here,
