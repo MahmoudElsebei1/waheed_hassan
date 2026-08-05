@@ -5,14 +5,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/features/home/presentation/views/widgets/latest_products.dart';
 import 'package:waheed_hassan/features/home/presentation/views/widgets/shop_by_category.dart';
 
-class HomeBody extends StatefulWidget {
+class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
 
-  @override
-  State<HomeBody> createState() => _HomeBodyState();
-}
-
-class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -42,7 +37,7 @@ class _HomeBodyState extends State<HomeBody> {
                   color: Color(0xFF9E9E9E),
                 ),
               ),
-              fillColor: Colors.white,
+              fillColor: Color(0xFFFFFFFF),
               filled: true,
               focusColor: Colors.black,
               hintText: 'البحث عن منتج...',

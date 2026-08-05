@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-class ItemGridView extends StatefulWidget {
+
+class ItemLatestProducts extends StatefulWidget {
   late final String imagePath;
-  ItemGridView({super.key,required this.imagePath});
+
+  ItemLatestProducts({super.key, required this.imagePath});
 
   @override
-  State<ItemGridView> createState() => _ItemGridViewState();
+  State<ItemLatestProducts> createState() => _ItemGridViewState();
 }
 
-class _ItemGridViewState extends State<ItemGridView> {
-  bool isFavourite = false;
-
+class _ItemGridViewState extends State<ItemLatestProducts> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,16 +36,8 @@ class _ItemGridViewState extends State<ItemGridView> {
                 end: 14,
                 top: 14,
                 child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      isFavourite = !isFavourite;
-                    }
-                    );
-                  },
-                  child: isFavourite
-                  //todo icons issue when clicked
-                      ? SvgPicture.asset('assets/shared/is_favourite.svg',)
-                      : SvgPicture.asset('assets/shared/favourites.svg'),
+                  onTap: () {},
+                  child: SvgPicture.asset('assets/shared/favourites.svg'),
                 ),
               ),
             ],
@@ -59,24 +51,60 @@ class _ItemGridViewState extends State<ItemGridView> {
                   children: [
                     SvgPicture.asset('assets/home_icons/rating.svg'),
                     Gap(5.w),
-                    Text('4.9'),
+                    Text(
+                      '4.9',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,
+                      ),
+                    ),
                     Gap(4.w),
-                    Text('(128)'),
+                    Text('(128)',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF99A1AF),
+                      ),),
                   ],
                 ),
+                Gap(8.h),
                 Text(
                   'بدلة كلاسيكية سوداء',
                   style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
                   ),
                 ),
-                Text('صوف إيطالي فاخر'),
+                Gap(2.h),
+                Text(
+                  'صوف إيطالي فاخر',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF6A7282),
+                  ),
+                ),
+                Gap(8.h),
                 Row(
                   children: [
-                    Text('2,450'),
-                    Text(' ج.م'),
+                    Text(
+                      '2,450',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      ' ج.م',
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF6A7282),
+                      ),
+                    ),
                     Spacer(),
                     InkWell(
                       child: Container(
@@ -89,7 +117,14 @@ class _ItemGridViewState extends State<ItemGridView> {
                           shape: BoxShape.rectangle,
                           border: Border.all(color: Color(0xFFE5E7EB)),
                         ),
-                        child: Text('إيجار'),
+                        child: Text(
+                          'إيجار',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ),
                   ],

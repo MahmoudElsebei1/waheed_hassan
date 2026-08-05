@@ -16,7 +16,7 @@ class ProductDetailsBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [ProductGallerySection(), Gap(24.h), ProductTitleSection(),Gap(2.h)
-        ,ColorSelectorSection(),Gap(2.h),ProductDescriptionSection(),Gap(4.h),SimilarProductsSection(),
+        ,ColorSelectorSection(),Gap(2.h),ProductDescriptionSection(),Gap(4.h),SimilarProductsSection(),Gap(300.h),
         ],
       ),
     );

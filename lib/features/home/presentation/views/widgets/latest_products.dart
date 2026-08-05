@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
-import 'item_grid_view.dart';
+import 'item_latest_products.dart';
 
 class LatestProducts extends StatefulWidget {
 
@@ -31,7 +31,7 @@ class _LatestProductsState extends State<LatestProducts> {
         childAspectRatio: 0.7,
       ),
       itemBuilder: (context, index) =>
-          ItemGridView(imagePath: images[index]),
+          ItemLatestProducts(imagePath: images[index]),
     );
   }
 }
