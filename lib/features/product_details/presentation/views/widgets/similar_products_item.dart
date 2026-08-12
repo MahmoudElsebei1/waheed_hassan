@@ -11,12 +11,12 @@ class SimilarProductsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4),
       child: Container(
         height: 280,
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          // border: Border.all(color: Color(0xFFF1F5F9)),
+          border: Border.all(color: Color(0xFFF1F5F9)),
           borderRadius: BorderRadius.circular(16),
           color: Colors.white,
         ),
@@ -29,7 +29,7 @@ class SimilarProductsItem extends StatelessWidget {
                 Image.network(
                   imagePath,
                   height: 173,
-                  width: 160,
+                  width: 178,
                   fit: BoxFit.cover,
                 ),
                 PositionedDirectional(
@@ -52,16 +52,16 @@ class SimilarProductsItem extends StatelessWidget {
                   ),
                 ),
                 PositionedDirectional(
-                  end: 8,
-                  top: 8,
+                  end: 4,
+                  top: 6,
                   child: CircleAvatar(
                     radius: 16,
                     backgroundColor: Colors.white,
                   ),
                 ),
                 PositionedDirectional(
-                  end: 14,
-                  top: 14,
+                  end: 10,
+                  top: 12,
                   child: GestureDetector(
                     onTap: () {},
                     child: SvgPicture.asset('assets/shared/favourites.svg'),
@@ -105,9 +105,16 @@ class SimilarProductsItem extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
-                          child: SvgPicture.asset(
-                            'assets/product_details/buy_now.svg',
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              'assets/product_details/buy_now.svg',
+                              height: 16,
+                            ),
                           ),
                         ),
                         Gap(45.65), // spacer may be better than gap
@@ -120,7 +127,7 @@ class SimilarProductsItem extends StatelessWidget {
                             color: Color(0xFF90A1B9),
                           ),
                         ),
-                        Gap(1.18.h),
+                        Gap(3.29.h),
                         Text(
                           '2,100',
                           style: TextStyle(
@@ -129,7 +136,7 @@ class SimilarProductsItem extends StatelessWidget {
                             color: Colors.black,
                           ),
                         ),
-                        Gap(1.18.h),
+                        Gap(3.82.h),
                         Text(
                           'ج',
                           style: TextStyle(

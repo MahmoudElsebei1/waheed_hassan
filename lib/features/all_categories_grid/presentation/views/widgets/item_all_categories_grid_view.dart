@@ -4,9 +4,15 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ItemAllCategoriesGridView extends StatelessWidget {
-  const ItemAllCategoriesGridView({super.key, required this.iconCategory, required this.category});
+  const ItemAllCategoriesGridView({
+    super.key,
+    required this.iconCategory,
+    required this.category, required this.paddingIcon,
+  });
+
   final String iconCategory;
   final String category;
+  final double paddingIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +24,20 @@ class ItemAllCategoriesGridView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(iconCategory),
+          Container(
+            padding: EdgeInsets.all(paddingIcon),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Color(0xFFEAEAEA)),
+            ),
+            child: SvgPicture.asset(iconCategory),
+          ),
           Gap(8.h),
-          Text(category),
+          Text(category,style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: Colors.black
+          ),),
         ],
       ),
     );

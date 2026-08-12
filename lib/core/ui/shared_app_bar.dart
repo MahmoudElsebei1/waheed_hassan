@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ProductDetailsAppBar extends StatelessWidget
-    implements PreferredSizeWidget {
-  const ProductDetailsAppBar({super.key});
+class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String appBarTitle;
+  const SharedAppBar({super.key, required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ProductDetailsAppBar extends StatelessWidget
           ),
           // Gap(87.5.w),
           Text(
-            'تفاصيل المنتج',
+            appBarTitle,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
           ),
           Stack(

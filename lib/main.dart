@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:waheed_hassan/features/home/presentation/views/home_view.dart';
-import 'package:waheed_hassan/features/product_details/presentation/views/product_details_view.dart';
-import 'features/all_categories/presentation/views/all_categories.dart';
-import 'features/all_categories/presentation/views/all_categories_grid.dart';
-import 'splash/view/splash.dart';
+import 'package:waheed_hassan/features/all_categories/presentation/views/all_categories.dart';
+import 'package:waheed_hassan/features/all_categories_grid/presentation/views/all_categories_grid.dart';
+import 'package:waheed_hassan/features/favourites/presentation/views/favourites_view.dart';
+
+import 'features/all_products/presentation/views/all_products_view.dart';
 
 void main() {
   runApp(const WaheedSuits());
@@ -34,7 +34,7 @@ class WaheedSuits extends StatelessWidget {
         ),
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ProductDetailsView(),
+      home: FavouritesView(),
     );
   }
 }

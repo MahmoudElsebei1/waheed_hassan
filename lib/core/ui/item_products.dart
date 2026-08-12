@@ -3,16 +3,16 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ItemLatestProducts extends StatefulWidget {
+class ItemProducts extends StatefulWidget {
   late final String imagePath;
 
-  ItemLatestProducts({super.key, required this.imagePath});
+  ItemProducts({super.key, required this.imagePath});
 
   @override
-  State<ItemLatestProducts> createState() => _ItemGridViewState();
+  State<ItemProducts> createState() => _ItemGridViewState();
 }
 
-class _ItemGridViewState extends State<ItemLatestProducts> {
+class _ItemGridViewState extends State<ItemProducts> {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,107 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:waheed_hassan/core/utils/app_text_styles.dart';
+import 'package:waheed_hassan/core/ui/custom_app_bar_with_title_and_one_icon.dart';
+import 'package:waheed_hassan/features/all_categories/presentation/views/widgets/text_form_field_section.dart';
 
 import 'widgets/item_all_categories.dart';
 
-class AllCategoriesView extends StatelessWidget {
+class AllCategoriesView extends StatefulWidget {
   const AllCategoriesView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      //TODO custom
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            //TODO custom widget
-            Stack(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xFFECECEC), width: 1),
-                  ),
-                  child: CircleAvatar(
-                    radius: 24,
-                    backgroundColor: Colors.white,
-                  ),
-                ),
-                PositionedDirectional(
-                  end: 21,
-                  top: 15,
-                  child: SvgPicture.asset('assets/shared/back_icon.svg'),
-                ),
-              ],
-            ),
-            Gap(89.5.w),
-            Text(
-              'كل التصنيفات',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            Gap(24.h),
-            TextFormField(
-              textDirection: TextDirection.rtl,
-              decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.all(14),
-                  child: SvgPicture.asset(
-                    'assets/home_icons/waheed_search.svg',
-                    width: 15.8.w,
-                    height: 15.8.h,
-                    color: Color(0xFF9E9E9E),
-                  ),
-                ),
-                fillColor: Color(0xFFF6F6F6),
-                filled: true,
-                focusColor: Colors.black,
-                hintText: 'البحث عن تصنيف...',
-                hintStyle: TextStyle(color: Color(0xFF9E9E9E)),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(color: Color(0xFFEAEAEA)),
-                ),
-              ),
-            ),
-            Gap(38.h),
+  State<AllCategoriesView> createState() => _AllCategoriesViewState();
+}
 
-            ItemAllCategories(
-              iconCategory: 'assets/shared/shirts.svg',
-              category: 'قمصان',
-            ),
-            Gap(8.h),
-            ItemAllCategories(
-              iconCategory: 'assets/shared/suits.svg',
-              category: 'بدلات',
-            ),
-            Gap(8.h),
-            ItemAllCategories(
-              iconCategory: 'assets/shared/shoes.svg',
-              category: 'أحذية',
-            ),
-            Gap(8.h),
-            ItemAllCategories(
-              iconCategory: 'assets/shared/accessories.svg',
-              category: 'اكسسوارات',
-            ),
-          ],
+class _AllCategoriesViewState extends State<AllCategoriesView> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'كل التصنيفات'),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              TextFormFieldSection(),
+              Gap(14.h),
+              ItemAllCategories(
+                iconCategory: 'assets/shared/shirts.svg',
+                category: 'قمصان',
+                paddingIcon: 8,
+              ),
+              Gap(8.h),
+              ItemAllCategories(
+                iconCategory: 'assets/shared/suits.svg',
+                category: 'بدلات',
+                paddingIcon: 8,
+              ),
+              Gap(8.h),
+              ItemAllCategories(
+                iconCategory: 'assets/shared/shoes.svg',
+                category: 'أحذية',
+                paddingIcon: 8,
+              ),
+              Gap(8.h),
+              ItemAllCategories(
+                iconCategory: 'assets/shared/accessories.svg',
+                category: 'اكسسوارات',
+                //there is an issue here
+                paddingIcon: 12,
+              ),
+            ],
+          ),
         ),
       ),
     );

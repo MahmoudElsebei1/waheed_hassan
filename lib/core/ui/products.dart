@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
-import 'item_latest_products.dart';
+import 'item_products.dart';
 
-class LatestProducts extends StatefulWidget {
+class Products extends StatefulWidget {
 
-  const LatestProducts({super.key});
+  const Products({super.key});
 
   @override
-  State<LatestProducts> createState() => _LatestProductsState();
+  State<Products> createState() => _ProductsState();
 }
 
-class _LatestProductsState extends State<LatestProducts> {
+class _ProductsState extends State<Products> {
   List<String> images = [
     'https://imgs.search.brave.com/_Xz47PlMWFx2p1ULyqRsFHwDeHLURPQA-Z0l5wo8naQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5maWxmYW4uY29t/L05ld3NQaWNzL0Zp/bGZhbk5ldy9sYXJn/ZS8yNTYyNTZfMC5q/cGc',
     'https://imgs.search.brave.com/IqyO57JqtzbzkRrQjSOdeA6wjC8Hr7rXJj3Niby9oL4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZyZWUtcGhvdG8v/YmVhcmRlZC1tYW4t/c3VpdC1wb3Npbmct/d2l0aC1jcm9zc2Vk/LWFybXNfMTcxMzM3/LTE4NTkyLmpwZz9z/ZW10PWFpc190ZXN0/X2Imdz03NDAmcT04/MA',
@@ -31,7 +31,7 @@ class _LatestProductsState extends State<LatestProducts> {
         childAspectRatio: 0.7,
       ),
       itemBuilder: (context, index) =>
-          ItemLatestProducts(imagePath: images[index]),
+          ItemProducts(imagePath: images[index]),
     );
   }
 }

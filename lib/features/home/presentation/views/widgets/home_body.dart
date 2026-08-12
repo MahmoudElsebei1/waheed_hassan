@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:waheed_hassan/features/home/presentation/views/widgets/latest_products.dart';
+import 'package:waheed_hassan/core/ui/products.dart';
+import 'package:waheed_hassan/core/ui/shared_text_form_field.dart';
 import 'package:waheed_hassan/features/home/presentation/views/widgets/shop_by_category.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
+  //some custom widgets
 
   @override
   Widget build(BuildContext context) {
@@ -15,43 +16,7 @@ class HomeBody extends StatelessWidget {
       child: ListView(
         children: [
           Gap(25.h),
-          TextFormField(
-            cursorColor: Colors.black,
-            cursorHeight: 22,
-            // textDirection: TextDirection.rtl,
-            decoration: InputDecoration(
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(color: Color(0xFFEAEAEA)),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(color: Color(0xFFEAEAEA)),
-              ),
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(14),
-                child: SvgPicture.asset(
-                  'assets/home_icons/waheed_search.svg',
-                  width: 15.8.w,
-                  height: 15.8.h,
-                  color: Color(0xFF9E9E9E),
-                ),
-              ),
-              fillColor: Color(0xFFFFFFFF),
-              filled: true,
-              focusColor: Colors.black,
-              hintText: 'البحث عن منتج...',
-              hintStyle: TextStyle(color: Color(0xFF9E9E9E)),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(color: Color(0xFFEAEAEA)),
-              ),
-              suffixIcon: Padding(
-                padding: const EdgeInsets.all(14),
-                child: SvgPicture.asset('assets/home_icons/filter.svg'),
-              ),
-            ),
-          ),
+          SharedTextFormField(color: Colors.white,),
           Gap(26.h),
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
@@ -126,7 +91,7 @@ class HomeBody extends StatelessWidget {
           ),
           ShopByCategory(),
           Gap(17.h),
-          LatestProducts(),
+          Products(),
           Gap(122.h),
         ],
       ),
