@@ -10,8 +10,13 @@ class PriceAndQuantitySection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
+        // todo المفروض مش من all
+        border: Border.all(color: Color(0xFFEAEAEA)),
         color: Colors.white,
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(24),topRight: Radius.circular(24))
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(24),
+          topRight: Radius.circular(24),
+        ),
       ),
       child: Row(
         children: [

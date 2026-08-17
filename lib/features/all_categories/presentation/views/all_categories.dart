@@ -19,7 +19,10 @@ class _AllCategoriesViewState extends State<AllCategoriesView> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'كل التصنيفات'),
+        appBar: CustomAppBarWithTitleAndOneIcon(
+          appBarTitle: 'كل التصنيفات',
+          fontSize: 18,
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -43,6 +46,7 @@ class _AllCategoriesViewState extends State<AllCategoriesView> {
                 paddingIcon: 8,
               ),
               Gap(8.h),
+              // TODO في غلط هنا
               ItemAllCategories(
                 iconCategory: 'assets/shared/accessories.svg',
                 category: 'اكسسوارات',

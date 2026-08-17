@@ -10,7 +10,7 @@ class FavouritesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'المفضلة',),
+      appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'المفضلة',fontSize: 18,),
       body: Column(
         children: <Widget>[
           Gap(32.h),

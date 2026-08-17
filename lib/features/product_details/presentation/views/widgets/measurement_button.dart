@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gap/flutter_gap.dart';
-import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:waheed_hassan/core/ui/custom_button_with_icon_and_txt.dart';
 
 class MeasurementCTAButton extends StatelessWidget {
   const MeasurementCTAButton({super.key});
@@ -10,40 +8,19 @@ class MeasurementCTAButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 113,
-      decoration: BoxDecoration(color: Colors.white,
-        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(24),bottomRight: Radius.circular(24))
+      decoration: BoxDecoration(
+        color: Colors.white,
+        // todo المفروض مش من all
+        border: Border.all(color: Color(0xFFEAEAEA)),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(24),
+          bottomRight: Radius.circular(24),
+        ),
       ),
       padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       child: Align(
         alignment: Alignment.topCenter,
-        child: SizedBox(
-          height: 56,
-          width: double.infinity,
-          child: ElevatedButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset('assets/product_details/continue.svg'),
-                Gap(12.w),
-                Text(
-                  'المتابعة لتحديد القياسات',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-            ),
-          ),
-        ),
+        child: CustomButtonWithIconAndTxt(img: 'assets/product_details/continue.svg',txt: 'المتابعة لتحديد القياسات',),
       ),
     );
   }

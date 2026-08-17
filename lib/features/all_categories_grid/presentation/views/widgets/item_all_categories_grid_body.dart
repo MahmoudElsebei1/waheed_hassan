@@ -29,14 +29,13 @@ class _ItemAllCategoriesGridBodyState extends State<ItemAllCategoriesGridBody> {
       child: Column(
         children: [
           Gap(32.h),
-
           Expanded(
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
-                childAspectRatio: 2,
+                childAspectRatio: 2.1294117647,
               ),
               itemCount: 4,
               itemBuilder: (context, index) => ItemAllCategoriesGridView(

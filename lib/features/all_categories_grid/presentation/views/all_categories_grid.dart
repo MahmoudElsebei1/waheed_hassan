@@ -14,7 +14,7 @@ class _AllCategoriesGridState extends State<AllCategoriesGrid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'كل التصنيفات',),
+      appBar: CustomAppBarWithTitleAndOneIcon(appBarTitle: 'كل التصنيفات',fontSize: 16,),
       // grid view was best one
       body: ItemAllCategoriesGridBody(),
     );

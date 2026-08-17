@@ -7,7 +7,7 @@ import 'package:waheed_hassan/features/home/presentation/views/widgets/shop_by_c
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
-  //some custom widgets
+  //todo some custom widgets
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +64,7 @@ class HomeBody extends StatelessWidget {
             ],
           ),
           Gap(15.h),
+          ShopByCategory(),
           Gap(16.h),
           Row(
             children: [
@@ -89,8 +90,8 @@ class HomeBody extends StatelessWidget {
               ),
             ],
           ),
-          ShopByCategory(),
           Gap(17.h),
+          //todo عايز اطول الصور شوية
           Products(),
           Gap(122.h),
         ],

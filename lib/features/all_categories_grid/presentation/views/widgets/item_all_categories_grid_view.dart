@@ -17,8 +17,10 @@ class ItemAllCategoriesGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // todo حاسس في مسافات راسي عايزة تتظبط
       decoration: BoxDecoration(
         color: Colors.white,
+        border: Border.all(color: Color(0xFFEAEAEA)),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(

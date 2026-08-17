@@ -28,7 +28,7 @@ class _ProductsState extends State<Products> {
         crossAxisCount: 2,
         crossAxisSpacing: 16.w,
         mainAxisSpacing: 16.h,
-        childAspectRatio: 0.7,
+        childAspectRatio: 0.6061643836,
       ),
       itemBuilder: (context, index) =>
           ItemProducts(imagePath: images[index]),

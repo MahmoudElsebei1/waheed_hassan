@@ -29,7 +29,7 @@ class _ShopByCategoryState extends State<ShopByCategory> {
         crossAxisCount: 2,
         mainAxisSpacing: 8,
         crossAxisSpacing: 8,
-        childAspectRatio: 2.9,
+        childAspectRatio: 3.2321428571,
       ),
       itemBuilder: (context, index) => ItemCategoriesShopping(
         iconCategoriesShop: iconCategoryShop[index],

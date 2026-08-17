@@ -9,6 +9,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
+      //todo navigation bar
       child: Scaffold(appBar: HomeAppBar(), body: HomeBody()),
     );
   }

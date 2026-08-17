@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gap/flutter_gap.dart';
-import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CustomAppBarWithTitleAndOneIcon extends StatelessWidget implements PreferredSizeWidget{
+class CustomAppBarWithTitleAndOneIcon extends StatelessWidget
+    implements PreferredSizeWidget {
   final String appBarTitle;
-  const CustomAppBarWithTitleAndOneIcon({super.key, required this.appBarTitle});
+  final double fontSize;
+
+  const CustomAppBarWithTitleAndOneIcon({
+    super.key,
+    required this.appBarTitle,
+    required this.fontSize,
+  });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      //todo انا عامل مسافة اقل م اللي في التصميم
+      centerTitle: true,
       backgroundColor: Colors.white,
-      title: Row(
+      leading: Row(
         children: [
+          //todo مسافة قدام الicon
           Stack(
             children: [
               Container(
@@ -20,10 +28,7 @@ class CustomAppBarWithTitleAndOneIcon extends StatelessWidget implements Preferr
                   shape: BoxShape.circle,
                   border: Border.all(color: Color(0xFFECECEC), width: 1),
                 ),
-                child: CircleAvatar(
-                  radius: 24,
-                  backgroundColor: Colors.white,
-                ),
+                child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
               ),
               PositionedDirectional(
                 end: 21,
@@ -32,15 +37,15 @@ class CustomAppBarWithTitleAndOneIcon extends StatelessWidget implements Preferr
               ),
             ],
           ),
-          Gap(80.5.w),
-          Text(
-            appBarTitle,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-          ),
         ],
+      ),
+      title: Text(
+        appBarTitle,
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
       ),
     );
   }
+
   @override
-  Size get preferredSize=> const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

@@ -26,7 +26,10 @@ class _ItemGridViewState extends State<ItemProducts> {
         children: [
           Stack(
             children: [
-              Image.network(widget.imagePath),
+              //todo المفروض حجم الصورة 176
+              Image.network(widget.imagePath,fit: BoxFit.fill,height: 160,),
+
+              //todo دول مش ثابتين
               PositionedDirectional(
                 end: 8,
                 top: 8,
