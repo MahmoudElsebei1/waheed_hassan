@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:waheed_hassan/features/home/presentation/views/home_view.dart';
+import 'package:waheed_hassan/features/my_account/views/my_account_view.dart';
+import 'package:waheed_hassan/features/my_orders/views/my_orders_view.dart';
+import 'package:waheed_hassan/features/shopping_cart/views/shopping_cart_contents.dart';
+
+import 'features/home/views/home_view.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -10,9 +14,43 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  int selectedIndex=0;
-  final PageController controller = PageController();
-  List<Widget> screens = [HomeView()];
+  int currentScreen = 0;
+  late final PageController controller;
+
+  late List<Widget> screens;
+
+  @override
+  void initState() {
+    screens = [
+      HomeView(),
+      MyOrdersView(),
+      ShoppingCartContentsView(),
+      MyAccountView(),
+    ];
+    controller = PageController(initialPage: currentScreen);
+    super.initState();
+  }
+
+  void _onTap(int index) {
+    setState(() {
+      currentScreen = index;
+      controller.animateToPage(
+        index,
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
+
+  Widget _navIcon(String path, int index) {
+    return SvgPicture.asset(
+      path,
+      colorFilter: ColorFilter.mode(
+        currentScreen == index ? const Color(0xFF292D32) : const Color(0xFF919191),
+        BlendMode.srcIn,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,42 +60,51 @@ class _RootState extends State<Root> {
         children: screens,
         onPageChanged: (v) {
           setState(() {
-            selectedIndex=v;
+            currentScreen = v;
           });
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: InkWell(
-              onTap: () {
-                setState(() {
-                  controller.jumpToPage(selectedIndex);
-                });
-              },
-              child: SvgPicture.asset(
-                'assets/nav_bar_icons/home_nav_bar_icon.svg',
-              ),
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
+        child: Container(
+          child: SizedBox(
+            height: 96,
+            child: BottomNavigationBar(
+              backgroundColor: Colors.white,
+              type: BottomNavigationBarType.fixed,
+              selectedItemColor: Color(0xFF292D32),
+              onTap: _onTap,
+              // unselectedItemColor: Color(0xFF919191),
+              items: [
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    'assets/nav_bar_icons/home_nav_bar_icon.svg',
+                  ),
+                  label: 'الرئيسية',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    'assets/nav_bar_icons/order_nav_bar_icon.svg',
+                  ),
+                  label: 'طلباتي',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    'assets/nav_bar_icons/cart_nav_bar_icon.svg',
+                  ),
+                  label: 'العربة',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.asset('assets/nav_bar_icons/acc_nav_bar_icon.svg'),
+                  label: 'حسابي',
+                ),
+              ],
             ),
-            label: 'الرئيسية',
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/nav_bar_icons/order_nav_bar_icon.svg',
-            ),
-            label: 'طلباتي',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/nav_bar_icons/cart_nav_bar_icon.svg',
-            ),
-            label: 'العربة',
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/nav_bar_icons/acc_nav_bar_icon.svg'),
-            label: 'حسابي',
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -13,21 +13,24 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Color(0xFFECECEC), width: 1),
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Color(0xFFECECEC), width: 1),
+                ),
+                child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
               ),
-              child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
-            ),
-            PositionedDirectional(
-              end: 25,
-              top: 16,
-              child: SvgPicture.asset('assets/shared/back_icon.svg'),
-            ),
-          ],
+              PositionedDirectional(
+                end: 26,
+                top: 16,
+                child: SvgPicture.asset('assets/shared/back_icon.svg'),
+              ),
+            ],
+          ),
         ),
         title: Text(
           appBarTitle,

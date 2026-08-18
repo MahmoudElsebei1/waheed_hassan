@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:waheed_hassan/features/my_orders/presentation/views/my_orders_view.dart';
-import 'package:waheed_hassan/features/shopping_cart/presentation/views/shopping_bag_contents.dart';
+import 'package:waheed_hassan/root.dart';
+
+import 'features/my_orders/views/my_orders_view.dart';
 
 void main() {
   runApp(const WaheedSuits());
@@ -21,7 +22,7 @@ class WaheedSuits extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Waheed Hassan',
       theme: ThemeData(
         fontFamily: 'IBMPlexSansArabic',
         textTheme: TextTheme(
@@ -31,7 +32,7 @@ class WaheedSuits extends StatelessWidget {
         ),
         colorScheme: .fromSeed(seedColor: Color(0xFFF6F6F6)),
       ),
-      home: MyOrdersView(),
+      home: Root(),
     );
   }
 }
