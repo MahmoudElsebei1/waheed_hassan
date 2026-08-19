@@ -5,14 +5,14 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../filter_by_date/views/filter_by_date_view.dart';
 
-class HeaderElementsScroll extends StatefulWidget {
-  const HeaderElementsScroll({super.key});
+class HeaderScrollableElements extends StatefulWidget {
+  const HeaderScrollableElements({super.key});
 
   @override
-  State<HeaderElementsScroll> createState() => _HeaderElementsScrollState();
+  State<HeaderScrollableElements> createState() => _HeaderScrollableElementsState();
 }
 
-class _HeaderElementsScrollState extends State<HeaderElementsScroll> {
+class _HeaderScrollableElementsState extends State<HeaderScrollableElements> {
   final List<String> myOrderStates = [
     'الكل',
     'قيد المعالجة',
@@ -20,7 +20,7 @@ class _HeaderElementsScrollState extends State<HeaderElementsScroll> {
     'قيد التوصيل',
     'ملغي',
   ];
-
+  int selectedIndex=0;
   void _showFilterByDateSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -77,20 +77,27 @@ class _HeaderElementsScrollState extends State<HeaderElementsScroll> {
           Gap(8.w),
           ...List.generate(
             myOrderStates.length,
-            (index) => Container(
-              margin: EdgeInsets.only(left: 8),
-              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black.withValues(alpha: 0.2)),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(99),
-              ),
-              child: Text(
-                myOrderStates[index],
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF334155),
+            (index) => GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex=index;
+                });
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 8),
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black.withValues(alpha: 0.2)),
+                  color: selectedIndex==index?Colors.black:Colors.white,
+                  borderRadius: BorderRadius.circular(99),
+                ),
+                child: Text(
+                  myOrderStates[index],
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: selectedIndex==index?Colors.white:Color(0xFF334155),
+                  ),
                 ),
               ),
             ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:waheed_hassan/features/product_filtering/views/products_filtering.dart';
 import 'package:waheed_hassan/root.dart';
-
-import 'features/my_orders/views/my_orders_view.dart';
+import 'core/constants/app_colors.dart';
 
 void main() {
   runApp(const WaheedSuits());
@@ -24,6 +24,7 @@ class WaheedSuits extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Waheed Hassan',
       theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.scaffoldPrimaryColor,
         fontFamily: 'IBMPlexSansArabic',
         textTheme: TextTheme(
           bodySmall: TextStyle(color: Colors.black),

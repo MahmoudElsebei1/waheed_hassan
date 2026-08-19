@@ -7,12 +7,11 @@ class ItemAllCategoriesGridView extends StatelessWidget {
   const ItemAllCategoriesGridView({
     super.key,
     required this.iconCategory,
-    required this.category, required this.paddingIcon,
+    required this.category,
   });
 
   final String iconCategory;
   final String category;
-  final double paddingIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,9 @@ class ItemAllCategoriesGridView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(paddingIcon),
+            height: 40,
+            width: 40,
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: Color(0xFFEAEAEA)),

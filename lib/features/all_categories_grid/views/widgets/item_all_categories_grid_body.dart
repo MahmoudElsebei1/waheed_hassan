@@ -41,7 +41,6 @@ class _ItemAllCategoriesGridBodyState extends State<ItemAllCategoriesGridBody> {
               itemBuilder: (context, index) => ItemAllCategoriesGridView(
                 iconCategory: iconCategoriesShop[index],
                 category: categoriesName[index],
-                paddingIcon: paddingIcon[index],
               ),
             ),
           ),

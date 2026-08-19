@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:waheed_hassan/features/all_products/views/all_products_view.dart';
 import 'package:waheed_hassan/features/product_details/views/product_details_view.dart';
 
 class ItemProducts extends StatefulWidget {
   late final String imagePath;
+  // String ;
 
   ItemProducts({super.key, required this.imagePath});
 
@@ -37,26 +37,22 @@ class _ItemGridViewState extends State<ItemProducts> {
           children: [
             Stack(
               children: [
-                //todo المفروض حجم الصورة 176
                 Image.network(widget.imagePath, fit: BoxFit.fill, height: 160),
-
                 //todo دول مش ثابتين
-                PositionedDirectional(
-                  end: 8,
-                  top: 8,
-                  child: CircleAvatar(
-                    radius: 16,
-                    backgroundColor: Colors.white,
-                  ),
-                ),
-                PositionedDirectional(
-                  end: 14,
-                  top: 14,
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: SvgPicture.asset('assets/shared/favourites.svg'),
-                  ),
-                ),
+               PositionedDirectional(
+                 end: 8,
+                 top: 8,
+                 child: Container(
+                   padding: EdgeInsets.all(6),
+                   decoration: BoxDecoration(color: Colors.white,shape: BoxShape.circle),
+                   child: GestureDetector(
+                     onTap: () {
+
+                     },
+                     child: SvgPicture.asset('assets/shared/favourites.svg',height: 20,width: 20,),
+                   ),
+                 ),
+               )
               ],
             ),
             Padding(

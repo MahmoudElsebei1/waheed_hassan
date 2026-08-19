@@ -10,8 +10,7 @@ class HomeView extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       //todo navigation bar
-      child: Scaffold(appBar: HomeAppBar(), body:
-      HomeBody(),backgroundColor: Color(0xFFF6F6F6),),
+      child: Scaffold(appBar: HomeAppBar(), body: HomeBody()),
     );
   }
 }

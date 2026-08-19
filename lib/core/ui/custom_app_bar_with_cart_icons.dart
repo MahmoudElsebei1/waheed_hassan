@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBarWithCartIcons extends StatelessWidget implements PreferredSizeWidget {
   final String appBarTitle;
 
-  const SharedAppBar({super.key, required this.appBarTitle});
+  const CustomAppBarWithCartIcons({super.key, required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: GestureDetector(
+    return AppBar(
+      surfaceTintColor: Colors.transparent,
+      centerTitle: true,
+      backgroundColor: Colors.white,
+      leadingWidth: 68,
+      leading: Padding(
+        padding: const EdgeInsets.only(right: 16.0,),
+        child: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: Stack(
             children: [
@@ -25,19 +27,22 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
               ),
               PositionedDirectional(
-                end: 26,
-                top: 16,
+                end: 23,
+                top: 15,
                 child: SvgPicture.asset('assets/shared/back_icon.svg'),
               ),
             ],
           ),
         ),
-        title: Text(
-          appBarTitle,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-        ),
-        actions: [
-          Stack(
+      ),
+      title: Text(
+        appBarTitle,
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+      ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: Stack(
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -69,12 +74,11 @@ class SharedAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

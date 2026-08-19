@@ -6,7 +6,9 @@ class MyAccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Container(
+        child: Center(child: Text('bew bewrebew bew ahmed mohsen',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),)),
+      ),
     );
   }
 }

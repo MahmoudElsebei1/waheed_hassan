@@ -15,13 +15,15 @@ class CustomAppBarWithTitleAndOneIcon extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      //todo انا عامل مسافة اقل م اللي في التصميم
       centerTitle: true,
       backgroundColor: Colors.white,
-      leading: Row(
-        children: [
-          //todo مسافة قدام الicon
-          Stack(
+      leading: Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Stack(
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -31,13 +33,13 @@ class CustomAppBarWithTitleAndOneIcon extends StatelessWidget
                 child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
               ),
               PositionedDirectional(
-                end: 21,
-                top: 15,
+                end: 20,
+                top: 16,
                 child: SvgPicture.asset('assets/shared/back_icon.svg'),
               ),
             ],
           ),
-        ],
+        ),
       ),
       title: Text(
         appBarTitle,

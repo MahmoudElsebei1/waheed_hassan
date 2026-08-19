@@ -3,12 +3,14 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:waheed_hassan/core/ui/products.dart';
 import 'package:waheed_hassan/core/ui/shared_text_form_field.dart';
-import 'package:waheed_hassan/features/all_categories/views/all_categories.dart';
-import 'package:waheed_hassan/features/all_products/views/all_products_view.dart';
 import 'package:waheed_hassan/features/home/views/widgets/shop_by_category.dart';
+
+import '../../../all_categories/views/all_categories.dart';
+import '../../../all_products/views/all_products_view.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
+
   //todo some custom widgets
 
   @override
@@ -18,7 +20,7 @@ class HomeBody extends StatelessWidget {
       child: ListView(
         children: [
           Gap(25.h),
-          SharedTextFormField(color: Colors.white,),
+          SharedTextFormField(color: Colors.white),
           Gap(26.h),
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
@@ -33,7 +35,7 @@ class HomeBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(backgroundColor: Color(0xFFB5B5B5), radius: 4),
+              CircleAvatar(backgroundColor: Colors.black, radius: 4),
               Gap(8).row,
               CircleAvatar(backgroundColor: Color(0xFFB5B5B5), radius: 4),
               Gap(8).row,
@@ -52,8 +54,15 @@ class HomeBody extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              TextButton(
-                onPressed: () {},
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AllCategoriesView(),
+                    ),
+                  );
+                },
                 child: Text(
                   'عرض الكل',
                   style: TextStyle(
@@ -79,9 +88,12 @@ class HomeBody extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AllProductsView(),));
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AllProductsView()),
+                  );
                 },
                 child: Text(
                   'عرض المزيد',

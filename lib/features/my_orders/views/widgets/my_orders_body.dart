@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'header_elements_scroll.dart';
+import 'header_scrollable_elements.dart';
 import 'item_my_order_with_one_button.dart';
 import 'item_my_order_with_two_btns.dart';
 
@@ -14,7 +14,7 @@ class MyOrdersBody extends StatelessWidget {
       child: Column(
         children: [
           Gap(24.h),
-          HeaderElementsScroll(),
+          HeaderScrollableElements(),
           Gap(32.h),
           Align(
             alignment: Alignment.centerRight,

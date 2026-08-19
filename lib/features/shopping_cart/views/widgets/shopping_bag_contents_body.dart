@@ -34,7 +34,6 @@ class ShoppingBagContentsBody extends StatelessWidget {
             ),
           ),
           TotalPrice(),
-          Gap(30.h)
         ],
       ),
     );

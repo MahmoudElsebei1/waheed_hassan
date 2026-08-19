@@ -22,6 +22,7 @@ class _FilterByDateViewState extends State<FilterByDateView> {
     'هذه السنة',
     'نطاق مخصص',
   ];
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +83,23 @@ class _FilterByDateViewState extends State<FilterByDateView> {
               mainAxisSpacing: 12,
               crossAxisSpacing: 16,
             ),
-            itemBuilder: (context, index) =>
-                ItemGridView(filterByDate: filterByDate[index]),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+
+                });
+              },
+              child: ItemGridView(
+                filterByDate: filterByDate[index],
+                containerColor: selectedIndex == index
+                    ? Colors.black
+                    : Color(0xFFF6F6F6),
+                textColor: selectedIndex == index
+                    ? Colors.white
+                    : Color(0xFF334155),
+              ),
+            ),
           ),
           Gap(23.h),
           // todo الافضل بدل الرص دا اعمل custom btn لكل زرار
@@ -93,7 +109,6 @@ class _FilterByDateViewState extends State<FilterByDateView> {
             colorOfTextBtn: Colors.white,
             fontSize: 16,
           ),
-          Gap(34.h),
         ],
       ),
     );

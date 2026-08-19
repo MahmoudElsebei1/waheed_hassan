@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:waheed_hassan/features/all_products/views/all_products_view.dart';
 
 import 'item_categories_shopping.dart';
 
@@ -34,6 +35,9 @@ class _ShopByCategoryState extends State<ShopByCategory> {
       itemBuilder: (context, index) => ItemCategoriesShopping(
         iconCategoriesShop: iconCategoryShop[index],
         categoriesName: itemCategoryName[index],
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => AllProductsView(),));
+        },
       ),
     );
   }

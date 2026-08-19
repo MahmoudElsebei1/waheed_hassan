@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:waheed_hassan/features/product_filtering/views/products_filtering.dart';
 
-class SharedTextFormField extends StatelessWidget {
+class SharedTextFormField extends StatefulWidget {
   final Color color;
   const SharedTextFormField({super.key, required this.color});
+
+  @override
+  State<SharedTextFormField> createState() => _SharedTextFormFieldState();
+}
+
+class _SharedTextFormFieldState extends State<SharedTextFormField> {
+
+  void _showFilterByDateSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isDismissible: true,
+      backgroundColor: Colors.transparent,
+      barrierColor: Colors.black.withOpacity(0.5),
+      builder: (context) => Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        ),
+        child: ProductsFiltering(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +52,7 @@ class SharedTextFormField extends StatelessWidget {
             color: Color(0xFF9E9E9E),
           ),
         ),
-        fillColor: color,
+        fillColor: widget.color,
         filled: true,
         focusColor: Colors.black,
         hintText: 'البحث عن منتج...',
@@ -40,7 +63,12 @@ class SharedTextFormField extends StatelessWidget {
         ),
         suffixIcon: Padding(
           padding: const EdgeInsets.all(14),
-          child: SvgPicture.asset('assets/home_icons/filter.svg'),
+          child: GestureDetector(
+              onTap: (){
+                _showFilterByDateSheet(context);
+
+              },
+              child: SvgPicture.asset('assets/home_icons/filter.svg')),
         ),
       ),
     );

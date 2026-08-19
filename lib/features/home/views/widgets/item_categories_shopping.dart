@@ -8,49 +8,52 @@ class ItemCategoriesShopping extends StatelessWidget {
     super.key,
     required this.iconCategoriesShop,
     required this.categoriesName,
+    required this.onTap,
   });
 
   final String iconCategoriesShop;
   final String categoriesName;
+  void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Row(
-        children: [
-          Gap(8.w),
-          Stack(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFFECECEC),
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Color(0xFFECECEC), width: 1),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          children: [
+            Gap(8.w),
+            Stack(
+              children: [
+                Container(
+                  width: 40,
+                  height: 40,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Color(0xFFECECEC), width: 1),
+                  ),
+                  child: SvgPicture.asset(iconCategoriesShop),
                 ),
-                child: CircleAvatar(radius: 24, backgroundColor: Colors.white),
-              ),
-              //TODO accessories icon مش مظبوطة
-              PositionedDirectional(
-                end: 12,
-                top: 12,
-                child: SvgPicture.asset(iconCategoriesShop),
-              ),
-            ],
-          ),
-          Gap(8.w),
-          Text(
-            categoriesName,
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
-              color: Colors.black,
+                //TODO accessories icon مش مظبوطة
+              ],
             ),
-          ),
-        ],
+            Gap(8.w),
+            Text(
+              categoriesName,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
