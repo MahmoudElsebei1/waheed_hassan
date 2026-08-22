@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:waheed_hassan/features/home/views/widgets/home_app_bar.dart';
-import 'package:waheed_hassan/features/home/views/widgets/home_body.dart';
+import '../widgets/home_app_bar.dart';
+import '../widgets/home_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

@@ -3,10 +3,10 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:waheed_hassan/core/ui/products.dart';
 import 'package:waheed_hassan/core/ui/shared_text_form_field.dart';
-import 'package:waheed_hassan/features/home/views/widgets/shop_by_category.dart';
+import 'package:waheed_hassan/features/home/widgets/shop_by_category.dart';
 
-import '../../../all_categories/views/all_categories.dart';
-import '../../../all_products/views/all_products_view.dart';
+import '../../all_categories/views/all_categories_view.dart';
+import '../../all_products/views/all_products_view.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -22,6 +22,7 @@ class HomeBody extends StatelessWidget {
           Gap(25.h),
           SharedTextFormField(color: Colors.white),
           Gap(26.h),
+          // AutoSwipeImages
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Image.network(

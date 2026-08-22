@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:waheed_hassan/features/product_details/views/widgets/product_actions_row.dart';
+import 'package:waheed_hassan/features/product_details/widgets/product_actions_row.dart';
 
 class ProductTitleSection extends StatelessWidget {
   const ProductTitleSection({super.key});

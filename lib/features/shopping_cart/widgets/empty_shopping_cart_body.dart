@@ -5,8 +5,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/ui/custom_button_with_icon_and_txt.dart';
 
-class MtShoppingCartBody extends StatelessWidget {
-  const MtShoppingCartBody({super.key});
+class EmptyShoppingCartBody extends StatelessWidget {
+  const EmptyShoppingCartBody({super.key});
 
   @override
   Widget build(BuildContext context) {

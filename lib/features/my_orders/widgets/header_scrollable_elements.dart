@@ -3,7 +3,7 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../filter_by_date/views/filter_by_date_view.dart';
+import '../../filter_by_date/views/filter_by_date_model_sheet.dart';
 
 class HeaderScrollableElements extends StatefulWidget {
   const HeaderScrollableElements({super.key});
@@ -32,7 +32,7 @@ class _HeaderScrollableElementsState extends State<HeaderScrollableElements> {
           color: Colors.white,
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         ),
-        child: FilterByDateView(),
+        child: FilterByDateModelSheetView(),
       ),
     );
   }

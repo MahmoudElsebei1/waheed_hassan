@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:waheed_hassan/features/shopping_cart/views/widgets/total_price.dart';
-
+import 'package:waheed_hassan/features/shopping_cart/widgets/total_price.dart';
 import 'enter_discount_code.dart';
 import 'item_shopping_cart.dart';
 import 'order_summary.dart';

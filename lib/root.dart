@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/features/my_account/views/my_account_view.dart';
 import 'package:waheed_hassan/features/my_orders/views/my_orders_view.dart';
-import 'package:waheed_hassan/features/shopping_cart/views/shopping_cart_contents.dart';
+import 'package:waheed_hassan/features/shopping_cart/views/shopping_cart_contents_view.dart';
 
 import 'features/home/views/home_view.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:waheed_hassan/features/product_filtering/views/products_filtering.dart';
+import 'package:waheed_hassan/features/add_new_title/views/add_new_title_view.dart';
+import 'package:waheed_hassan/features/product_filtering/views/products_filtering_model_sheet.dart';
 import 'package:waheed_hassan/root.dart';
 import 'core/constants/app_colors.dart';
 
@@ -33,7 +34,7 @@ class WaheedSuits extends StatelessWidget {
         ),
         colorScheme: .fromSeed(seedColor: Color(0xFFF6F6F6)),
       ),
-      home: Root(),
+      home: AddNewTitleView(),
     );
   }
 }

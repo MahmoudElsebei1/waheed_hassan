@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:waheed_hassan/features/shopping_cart/views/widgets/item_shopping_cart.dart';
+import '../widgets/item_shopping_cart.dart';
 
 class DeleteItem extends StatelessWidget {
   const DeleteItem({super.key});

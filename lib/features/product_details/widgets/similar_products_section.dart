@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:waheed_hassan/features/product_details/views/widgets/similar_products_item.dart';
+import 'package:waheed_hassan/features/product_details/widgets/similar_products_item.dart';
 
 class SimilarProductsSection extends StatelessWidget {
   const SimilarProductsSection({super.key});

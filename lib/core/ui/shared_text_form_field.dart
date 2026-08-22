@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:waheed_hassan/features/product_filtering/views/products_filtering.dart';
+import 'package:waheed_hassan/features/product_filtering/views/products_filtering_model_sheet.dart';
 
 class SharedTextFormField extends StatefulWidget {
   final Color color;
@@ -24,7 +24,7 @@ class _SharedTextFormFieldState extends State<SharedTextFormField> {
           color: Colors.white,
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         ),
-        child: ProductsFiltering(),
+        child: ProductsFilteringModelSheet(),
       ),
     );
   }
@@ -66,7 +66,6 @@ class _SharedTextFormFieldState extends State<SharedTextFormField> {
           child: GestureDetector(
               onTap: (){
                 _showFilterByDateSheet(context);
-
               },
               child: SvgPicture.asset('assets/home_icons/filter.svg')),
         ),
