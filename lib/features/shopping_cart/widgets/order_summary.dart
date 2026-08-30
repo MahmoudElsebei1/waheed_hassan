@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:waheed_hassan/shared/order_summary_upper_section.dart';
 
 class OrderSummary extends StatelessWidget {
   const OrderSummary({super.key});
@@ -17,22 +18,7 @@ class OrderSummary extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Row(
-            children: [
-              SvgPicture.asset('assets/shopping_cart/order_summary.svg'),
-              Gap(4.w),
-              Text(
-                'ملخص الطلب',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xFF0A0A0A),
-                ),
-              ),
-              Spacer(),
-              SvgPicture.asset('assets/shopping_cart/arrow_down.svg'),
-            ],
-          ),
+          OrderSummaryUpperSection(img: 'assets/shopping_cart/arrow_down.svg',),
           Gap(15.99),
           Row(
             children: [
