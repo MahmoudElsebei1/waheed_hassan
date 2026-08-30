@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomBtnWithOnlyTitle extends StatelessWidget {
+class CustomButtonWithOnlyTitle extends StatelessWidget {
   final String textButton;
   final Color btnColor;
   final Color colorOfTextBtn;
   final double fontSize;
 
-  const CustomBtnWithOnlyTitle({
+  const CustomButtonWithOnlyTitle({
     super.key,
     required this.textButton,
     required this.btnColor,

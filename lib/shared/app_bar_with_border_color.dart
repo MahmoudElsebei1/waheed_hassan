@@ -10,6 +10,7 @@ class AppBarWithBorderColor extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      shadowColor: Colors.transparent,
       backgroundColor: Colors.white,
       centerTitle: true,
       shape: Border.all(color: Color(0xFFF6F6F6), width: 1),

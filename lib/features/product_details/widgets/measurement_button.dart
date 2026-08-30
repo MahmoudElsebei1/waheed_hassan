@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:waheed_hassan/core/ui/custom_button_with_icon_and_txt.dart';
+import 'package:waheed_hassan/shared/custom_button_with_icon_and_txt.dart';
 
 class MeasurementCTAButton extends StatelessWidget {
   const MeasurementCTAButton({super.key});
@@ -20,7 +20,10 @@ class MeasurementCTAButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       child: Align(
         alignment: Alignment.topCenter,
-        child: CustomButtonWithIconAndTxt(img: 'assets/product_details/continue.svg',txt: 'المتابعة لتحديد القياسات',),
+        child: CustomButtonWithIconAndTxt(
+          img: 'assets/product_details/continue.svg',
+          txt: 'المتابعة لتحديد القياسات',
+        ),
       ),
     );
   }

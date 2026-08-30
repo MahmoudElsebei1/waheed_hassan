@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:waheed_hassan/core/ui/custom_btn_with_only_title.dart';
+import 'package:waheed_hassan/shared/custom_button_with_only_title.dart';
 
 class TotalPrice extends StatelessWidget {
   const TotalPrice({super.key});
@@ -43,7 +43,7 @@ class TotalPrice extends StatelessWidget {
           ),
           Gap(14.w),
           Expanded(
-            child: CustomBtnWithOnlyTitle(
+            child: CustomButtonWithOnlyTitle(
               fontSize: 16,
               textButton: 'إتمام الطلب',
               btnColor: Colors.black,

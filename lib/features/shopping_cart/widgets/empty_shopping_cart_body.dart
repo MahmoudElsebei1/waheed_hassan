@@ -3,7 +3,7 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/ui/custom_button_with_icon_and_txt.dart';
+import '../../../shared/custom_button_with_icon_and_txt.dart';
 
 class EmptyShoppingCartBody extends StatelessWidget {
   const EmptyShoppingCartBody({super.key});

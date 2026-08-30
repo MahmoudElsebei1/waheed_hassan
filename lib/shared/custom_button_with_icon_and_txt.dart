@@ -6,7 +6,12 @@ import 'package:flutter_svg/svg.dart';
 class CustomButtonWithIconAndTxt extends StatelessWidget {
   final String img;
   final String txt;
-  const CustomButtonWithIconAndTxt({super.key, required this.img, required this.txt});
+
+  const CustomButtonWithIconAndTxt({
+    super.key,
+    required this.img,
+    required this.txt,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,7 @@ class CustomButtonWithIconAndTxt extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(img),
+            SvgPicture.asset(img, color: Colors.white),
             Gap(12.w),
             Text(
               txt,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:waheed_hassan/core/ui/custom_btn_with_only_title.dart';
+import 'package:waheed_hassan/shared/custom_button_with_only_title.dart';
 
 class ItemMyOrderWithTwoBtns extends StatelessWidget {
   const ItemMyOrderWithTwoBtns({super.key});
@@ -116,7 +116,7 @@ class ItemMyOrderWithTwoBtns extends StatelessWidget {
               Expanded(
                 child: SizedBox(
                   height: 36,
-                  child: CustomBtnWithOnlyTitle(
+                  child: CustomButtonWithOnlyTitle(
                     fontSize: 16,
                     textButton: 'عرض التفاصيل',
                     btnColor: Color(0xFFe6e6e6),
@@ -128,7 +128,7 @@ class ItemMyOrderWithTwoBtns extends StatelessWidget {
               Expanded(
                 child: SizedBox(
                   height: 36,
-                  child: CustomBtnWithOnlyTitle(
+                  child: CustomButtonWithOnlyTitle(
                     fontSize: 16,
                     textButton: 'تتبع الطلب',
                     btnColor: Colors.black,

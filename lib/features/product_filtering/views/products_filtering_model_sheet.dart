@@ -4,7 +4,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:waheed_hassan/features/product_filtering/widgets/header_products_filtering.dart';
 import 'package:waheed_hassan/features/product_filtering/widgets/price_range_section.dart';
 import 'package:waheed_hassan/shared/upper_model_sheet.dart';
-import '../../../core/ui/custom_btn_with_only_title.dart';
+import '../../../shared/custom_button_with_only_title.dart';
 
 class ProductsFilteringModelSheet extends StatelessWidget {
   const ProductsFilteringModelSheet({super.key});
@@ -58,7 +58,7 @@ class ProductsFilteringModelSheet extends StatelessWidget {
           Gap(32.h),
           PriceRangeSection(),
           Spacer(),
-          CustomBtnWithOnlyTitle(
+          CustomButtonWithOnlyTitle(
             fontSize: 16,
             textButton: 'عرض النتائج (24)',
             btnColor: Colors.black,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:waheed_hassan/features/all_categories/widgets/text_form_field_section.dart';
+import 'package:waheed_hassan/shared/custom_text_field_with_title_and_icon.dart';
+
 import 'item_all_categories.dart';
 
 class AllCategoriesBody extends StatelessWidget {
@@ -12,7 +13,14 @@ class AllCategoriesBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          TextFormFieldSection(),
+          CustomTextFieldWithTitleAndIcon(
+            hintText: 'البحث عن تصنيف...',
+            svgIcon: 'assets/home_icons/waheed_search.svg',
+            backgroundColor: Colors.white,
+            borderRadius: 12,
+            containerPadding: 16,
+            contentPadding: 14,
+          ),
           Gap(14.h),
           ItemAllCategories(
             iconCategory: 'assets/shared/shirts.svg',

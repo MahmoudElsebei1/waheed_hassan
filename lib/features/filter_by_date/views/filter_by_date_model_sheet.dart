@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/features/filter_by_date/widgets/filter_for_which.dart';
 import 'package:waheed_hassan/features/filter_by_date/widgets/header_section.dart';
 
-import '../../../../core/ui/custom_btn_with_only_title.dart';
+import '../../../shared/custom_button_with_only_title.dart';
 import '../widgets/header_section.dart';
 
 class FilterByDateModelSheetView extends StatefulWidget {
@@ -44,7 +44,7 @@ class _FilterByDateModelSheetViewState extends State<FilterByDateModelSheetView>
           FilterForWhich(),
           Gap(23.h),
           // todo الافضل بدل الرص دا اعمل custom btn لكل زرار
-          CustomBtnWithOnlyTitle(
+          CustomButtonWithOnlyTitle(
             textButton: 'تطبيق التصفية',
             btnColor: Color(0xFF000000),
             colorOfTextBtn: Colors.white,

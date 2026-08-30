@@ -5,7 +5,7 @@ import 'package:waheed_hassan/core/ui/custom_app_bar_with_title_and_one_icon.dar
 import 'package:waheed_hassan/features/all_categories/widgets/all_categories_body.dart';
 
 import '../widgets/item_all_categories.dart';
-import '../widgets/text_form_field_section.dart';
+import '../../../shared/custom_text_field_with_title_and_icon.dart';
 
 class AllCategoriesView extends StatefulWidget {
   const AllCategoriesView({super.key});
