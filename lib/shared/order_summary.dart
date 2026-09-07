@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/shared/order_summary_upper_section.dart';
 
 class OrderSummary extends StatelessWidget {

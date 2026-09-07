@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:waheed_hassan/core/ui/custom_app_bar_with_only_title.dart';
-
 import '../widgets/my_orders_body.dart';
 
 class MyOrdersView extends StatelessWidget {

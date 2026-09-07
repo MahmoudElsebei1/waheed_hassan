@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
 
-class WayOfDeliverySection extends StatelessWidget {
-  const WayOfDeliverySection({super.key});
+class WayOfReceiveProduct extends StatelessWidget {
+  const WayOfReceiveProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class WayOfDeliverySection extends StatelessWidget {
         Row(
           children: [
             SvgPicture.asset(
-              'assets/my_orders_assets/conduction_mode.svg',
+              'assets/shared/deliver_order.svg',
               width: 20,
               height: 20,
               color: Color(0xFF314158),

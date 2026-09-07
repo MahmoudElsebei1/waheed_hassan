@@ -3,7 +3,7 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/features/order_review/widgets/delivery_address_section.dart';
 import 'package:waheed_hassan/features/order_review/widgets/price_and_confirm_order_section.dart';
-import 'package:waheed_hassan/shared/way_of_delivery_section.dart';
+import 'package:waheed_hassan/shared/way_of_receive_product.dart';
 
 class OrderReviewBody extends StatelessWidget {
   const OrderReviewBody({super.key});
@@ -17,7 +17,7 @@ class OrderReviewBody extends StatelessWidget {
           child: Column(
             children: [
               Gap(21),
-              WayOfDeliverySection(),
+              WayOfReceiveProduct(),
               Gap(16),
               DeliveryAddressSection(),
             ],

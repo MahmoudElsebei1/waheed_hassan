@@ -13,7 +13,7 @@ class SharedTextFormField extends StatefulWidget {
 
 class _SharedTextFormFieldState extends State<SharedTextFormField> {
 
-  void _showFilterByDateSheet(BuildContext context) {
+  void _showFilterByFilterProducts(BuildContext context) {
     showModalBottomSheet(
       context: context,
       isDismissible: true,
@@ -65,7 +65,7 @@ class _SharedTextFormFieldState extends State<SharedTextFormField> {
           padding: const EdgeInsets.all(14),
           child: GestureDetector(
               onTap: (){
-                _showFilterByDateSheet(context);
+                _showFilterByFilterProducts(context);
               },
               child: SvgPicture.asset('assets/home_icons/filter.svg')),
         ),

@@ -4,6 +4,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ^3.12.2
+
 dependencies:
   flutter:
     sdk: flutter
@@ -13,19 +14,39 @@ dependencies:
   flutter_screenutil_plus: ^1.5.0
   flutter_localization: ^0.3.3
   dotted_line: ^3.2.2
-
-
-
-
+  dotted_border: ^3.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/icon/app_icon.png
+  android_12:
+    image: assets/icon/app_icon.png
+    color: "#FFFFFF"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo/app_logo.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+  min_sdk_android: 21
+  web:
+    generate: false
+  windows:
+    generate: false
+  macos:
+    generate: false
+
 flutter:
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/app_logo/
     - assets/home_icons/
@@ -37,10 +58,7 @@ flutter:
     - assets/shopping_cart/
     - assets/notification/
     - assets/my_orders_assets/
-  #   - images/a_dot_ham.jpeg
 
-  # To add custom fonts to your application, add a fonts section here,
-  # example:
   fonts:
     - family: IBMPlexSansArabic
       fonts:

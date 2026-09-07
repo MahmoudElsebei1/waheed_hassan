@@ -16,23 +16,22 @@ class CustomButtonWithOnlyTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Text(
-        textButton,
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w500,
-          color: colorOfTextBtn,
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadiusGeometry.circular(fontSize),
+        color: btnColor,
       ),
-      style: ElevatedButton.styleFrom(
-        overlayColor: Colors.transparent,
-        backgroundColor: btnColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(fontSize),
+      width: double.infinity,
+      height: 56,
+      child: Center(
+        child: Text(
+          textButton,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: colorOfTextBtn,
+          ),
         ),
-        minimumSize: Size(double.infinity, 56),
       ),
     );
   }

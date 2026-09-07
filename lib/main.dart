@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:waheed_hassan/features/order_complete/views/complete_order_view.dart';
+import 'package:waheed_hassan/features/add_new_title/views/add_new_title_view.dart';
+import 'package:waheed_hassan/features/order_complete/views/order_complete_view.dart';
 import 'core/constants/app_colors.dart';
 
 void main() {

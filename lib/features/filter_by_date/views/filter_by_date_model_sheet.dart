@@ -3,10 +3,11 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:waheed_hassan/features/filter_by_date/widgets/filter_for_which.dart';
-import 'package:waheed_hassan/features/filter_by_date/widgets/header_section.dart';
+import 'package:waheed_hassan/features/filter_by_date/widgets/header_model_sheet_section.dart';
+import 'package:waheed_hassan/shared/upper_model_sheet.dart';
 
 import '../../../shared/custom_button_with_only_title.dart';
-import '../widgets/header_section.dart';
+import '../widgets/header_model_sheet_section.dart';
 
 class FilterByDateModelSheetView extends StatefulWidget {
   const FilterByDateModelSheetView({super.key});
@@ -30,16 +31,8 @@ class _FilterByDateModelSheetViewState extends State<FilterByDateModelSheetView>
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: 40,
-            height: 4,
-            margin: const EdgeInsets.only(bottom: 16),
-            decoration: BoxDecoration(
-              color: Color(0xFFD9D9D9),
-              borderRadius: BorderRadius.circular(4),
-            ),
-          ),
-          HeaderSection(),
+          UpperModelSheet(),
+          HeaderModelSheetSection(textModelSheet: 'تصفية حسب التاريخ',),
           Gap(24.h),
           FilterForWhich(),
           Gap(23.h),

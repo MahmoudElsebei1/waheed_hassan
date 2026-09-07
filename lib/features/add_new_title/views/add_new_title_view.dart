@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gap/flutter_gap.dart';
 import 'package:waheed_hassan/features/add_new_title/widgets/add_new_title_body.dart';
-import 'package:waheed_hassan/features/add_new_title/widgets/introductoryText.dart';
-import 'package:waheed_hassan/features/add_new_title/widgets/text_form_field_with_only_title.dart';
 import 'package:waheed_hassan/shared/app_bar_with_border_color.dart';
-import 'package:waheed_hassan/shared/custom_text_field_with_title_and_icon.dart';
 
 class AddNewTitleView extends StatelessWidget {
   const AddNewTitleView({super.key});

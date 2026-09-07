@@ -3,9 +3,31 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:waheed_hassan/core/utils/app_text_styles.dart';
+import 'package:waheed_hassan/root.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
+
+  @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    _goToNextScreen();
+  }
+
+  Future<void> _goToNextScreen() async {
+    await Future.delayed(const Duration(seconds: 3));
+    if (!mounted) return;
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const Root()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

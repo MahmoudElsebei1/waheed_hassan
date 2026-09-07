@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
-import 'package:waheed_hassan/features/order_review/widgets/delivery_address_description.dart';
+import 'package:waheed_hassan/shared/delivery_address_description.dart';
 import 'package:waheed_hassan/shared/row_of_text_and_icon.dart';
 import 'package:waheed_hassan/shared/order_summary_upper_section.dart';
 
@@ -13,7 +13,7 @@ class DeliveryAddressSection extends StatelessWidget {
       children: [
         Row(
           children: [
-            RowOfTextAndIcon(),
+            // RowOfTextAndIcon(textOfRow: '', iconOfRow: '',),
             Spacer(),
             Text(
               'تغيير',
