@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:waheed_hassan/features/add_new_title/views/add_new_title_view.dart';
 import 'package:waheed_hassan/features/order_complete/views/order_complete_view.dart';
+import 'package:waheed_hassan/features/suit_sizes/views/suit_sizes_view.dart';
 import 'core/constants/app_colors.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class WaheedSuits extends StatelessWidget {
         ),
         colorScheme: .fromSeed(seedColor: Color(0xFFF6F6F6)),
       ),
-      home: OrderCompleteView(),
+      home: SuitSizesView(),
     );
   }
 }

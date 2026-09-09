@@ -4,7 +4,6 @@ import 'package:waheed_hassan/features/order_complete/widgets/way_of_delivery_co
 import 'package:waheed_hassan/features/order_complete/widgets/way_of_payment.dart';
 import 'package:waheed_hassan/features/order_complete/widgets/way_of_payment_model_sheet.dart';
 import 'package:waheed_hassan/shared/container_with_dotted_border.dart';
-
 import '../../../shared/order_summary.dart';
 import '../../../shared/row_of_text_and_icon.dart';
 import '../../../shared/way_of_receive_product.dart';
@@ -21,6 +20,7 @@ class _OrderCompleteBodyState extends State<OrderCompleteBody> {
     showModalBottomSheet(
       context: context,
       isDismissible: true,
+      isScrollControlled: true,
       backgroundColor: Colors.transparent,
       barrierColor: Colors.black.withOpacity(0.5),
       builder: (context) => Container(

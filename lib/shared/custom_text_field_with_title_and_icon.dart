@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomTextFieldWithTitleAndIcon extends StatelessWidget {
-  String hintText;
-  String svgIcon;
-  Color backgroundColor;
-  double containerPadding;
-  double borderRadius;
-  double contentPadding;
+  final String hintText;
+  final String svgIcon;
+  final Color backgroundColor;
+  final double containerPadding;
+  final double borderRadius;
+  final double contentPadding;
+  final Color borderColor;
 
   CustomTextFieldWithTitleAndIcon({
     super.key,
@@ -17,13 +18,13 @@ class CustomTextFieldWithTitleAndIcon extends StatelessWidget {
     required this.borderRadius,
     required this.containerPadding,
     required this.contentPadding,
+    required this.borderColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: containerPadding),
-      // height: 96,
       width: double.infinity,
       decoration: BoxDecoration(color: backgroundColor),
       child: TextFormField(
@@ -51,14 +52,14 @@ class CustomTextFieldWithTitleAndIcon extends StatelessWidget {
             padding: const EdgeInsets.all(14),
             child: SvgPicture.asset(svgIcon),
           ),
-          fillColor: Color(0xFFF6F6F6),
+          fillColor: backgroundColor,
           filled: true,
           focusColor: Colors.black,
           hintText: hintText,
           hintStyle: TextStyle(color: Color(0xFF9E9E9E)),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius),
-            borderSide: BorderSide(color: Color(0xFFEAEAEA)),
+            borderSide: BorderSide(color: borderColor),
           ),
         ),
       ),

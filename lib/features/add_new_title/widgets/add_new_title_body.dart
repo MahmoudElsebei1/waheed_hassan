@@ -23,6 +23,7 @@ class AddNewTitleBody extends StatelessWidget {
                   Gap(32),
                   IntroductoryText(introductoryText: 'الاسم الكامل'),
                   CustomTextFieldWithTitleAndIcon(
+                    borderColor: Color(0xFFEAEAEA),
                     hintText: 'أدخل اسمك الكامل',
                     svgIcon: 'assets/nav_bar_icons/acc_nav_bar_icon.svg',
                     backgroundColor: Colors.transparent,
@@ -61,6 +62,7 @@ class AddNewTitleBody extends StatelessWidget {
                   ),
                   IntroductoryText(introductoryText: 'رقم الهاتف'),
                   CustomTextFieldWithTitleAndIcon(
+                    borderColor: Color(0xFFEAEAEA),
                     hintText: '+15 5X XXX XXXX',
                     svgIcon: 'assets/shared/phone_number.svg',
                     backgroundColor: Colors.transparent,
@@ -77,6 +79,7 @@ class AddNewTitleBody extends StatelessWidget {
                     borderRadius: 16,
                     containerPadding: 0,
                     contentPadding: 32,
+                    borderColor: Color(0xFFEAEAEA),
                   ),
                 ],
               ),

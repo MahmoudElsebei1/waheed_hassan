@@ -20,6 +20,7 @@ class AllCategoriesBody extends StatelessWidget {
             borderRadius: 12,
             containerPadding: 16,
             contentPadding: 14,
+            borderColor: Color(0xFFEAEAEA),
           ),
           Gap(14.h),
           ItemAllCategories(
